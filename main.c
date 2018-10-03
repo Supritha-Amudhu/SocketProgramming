@@ -170,6 +170,7 @@ int initiate_chat()
     {
     	/* clntSock is connected to a client! */
         printf("Connected to client %s\n", inet_ntoa(echoClntAddr.sin_addr));
+        printf("<Type 'bye' to stop the conversation>\n");
         // printf("%s %d", g_username, strlen(g_username));
         char friend_name[10];
         memset(friend_name, 0, sizeof friend_name);
@@ -248,7 +249,7 @@ int chat_with_friend()
         DieWithError(" connect () failed");
     else
     	printf("\nConnected to server!\n");
-
+    	printf("<Type 'bye' to stop the conversation>\n");
     char name[20] = "You\0";
     if (send(sock, name, strlen(name), 0) < strlen(name))
 		DieWithError("Client: Unable to send user name");
