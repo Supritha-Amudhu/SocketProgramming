@@ -144,21 +144,21 @@ void sendMessage(int clntSocket, char *username)
 
 void getUserMessages(int clntSocket, char *username)
 {
-    char* existing_file_contents = malloc(1000);
+    char* existing_file_contents = malloc(2000);
     FILE *file_reader = fopen(MESSAGES_PATH, "rt"); 
     if (file_reader == NULL) {
         printf("Error opening file.\n");
     }
 
     char *messages_with_count;
-    messages_with_count = malloc(1000);
+    messages_with_count = malloc(2000);
 
     int message_count = 0;
 
     char *messages;
-    messages = malloc(1000);
+    messages = malloc(2000);
 
-    existing_file_contents = fgets(existing_file_contents, 500, file_reader);
+    existing_file_contents = fgets(existing_file_contents, 2000, file_reader);
 
     while(existing_file_contents != NULL) {
         char* message_str = strtok(existing_file_contents, "$$$");
@@ -166,9 +166,10 @@ void getUserMessages(int clntSocket, char *username)
             message_str = strtok(NULL, "$$$");
             message_count = message_count + 1;
             strcat(messages, message_str);
+            // strcat(messages, "\n");
             printf("Messages count: %d\n", message_count);
         }
-        existing_file_contents = fgets(existing_file_contents, 50, file_reader);
+        existing_file_contents = fgets(existing_file_contents, 2000, file_reader);
     }
 
     fclose(file_reader);

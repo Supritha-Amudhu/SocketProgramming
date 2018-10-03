@@ -37,26 +37,66 @@ int execute_commands(int option, int sock) {
 	
 	switch(option) {
 		case CONNECT_SERVER:
+			if (sock)
+				{
+					close(sock);
+					printf("Disconnecting from Server!\n");
+				}
 			sock = connect_to_server();
 		break;
 		case USER_LIST:
-			get_list_of_users(sock);
+			if (sock)
+				{
+					get_list_of_users(sock);
+				}
+			else
+				{
+					printf("Please connect to the server and try again.\n");
+				}
 		break;
 		case SEND_MESSAGE:
-			send_message(sock);
+			if (sock)
+				{
+					send_message(sock);
+				}
+			else
+				{
+					printf("Please connect to the server and try again.\n");
+				}
 		break;
 		case GET_MESSAGES:
-			get_messages(sock);
+			if (sock)
+				{
+					get_messages(sock);
+				}
+			else
+				{
+					printf("Please connect to the server and try again.\n");
+				}
 		break;
 		case INITIATE_CHAT:
-			close(sock);
-			printf("Disconnecting from Server!\n");
-			initiate_chat();
+			if (sock)
+				{
+					close(sock);
+					printf("Disconnecting from Server!\n");
+					initiate_chat();
+				}
+			else
+				{
+					printf("Please connect to the server and try again.\n");
+				}
 		break;
 		case CHAT_WITH_FRIEND:
-			close(sock);
-			printf("Disconnecting from Server!\n");
-			chat_with_friend();
+			if (sock)
+				{
+					close(sock);
+					printf("Disconnecting from Server!\n");
+					chat_with_friend();
+				}
+			else
+				{
+					printf("Please connect to the server and try again.\n");
+				}
 		break;
 		case REGISTER_AS_USER:
 			if (sock)
@@ -346,14 +386,14 @@ int get_messages(int sock) {
 	char option[1];
 	option[0] = '3';
 	char *messages;
-	messages = malloc(200);
+	messages = malloc(2000);
 	
 	if (send(sock, option, strlen(option), 0) != strlen(option))
 		DieWithError("Unable to send get_message option");
 	// else
 	// 	// printf("waiting for messages..\n");
 
-	if (recv(sock, messages, 600, 0) <= 0)
+	if (recv(sock, messages, 2000, 0) <= 0)
 		DieWithError("Unable to get user messages");
 
 	printf("\nMessages:\n%s\n", messages);
