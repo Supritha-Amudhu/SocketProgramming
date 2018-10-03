@@ -22,41 +22,55 @@ Steps to option 6 - Register a new user:
 4. Enter IP address and Port number.
 5. Enter new username and password.
 6. Data gets sent to the server and is then stored in the file registered_users.txt.
-7. The registered user now has to select from options 0-7 to login and then perform operations.
+7. Select option 0 and enter IP, port and Login with credentials.
+8. The registered user now can select from options 0-7 to login and then perform operations.
 
 Steps to option 1 - Get user list:
 1. In a terminal window, compile and run server.c.
 2. In a new terminal window, compile and run main.c.
-3. Enter Username and password. Wait for validation.
-4. After validation, choose option 1.
+3. Select option 0.
+4. Enter Username and password. Wait for validation.
+5. After validation, choose option 1.
 
 Steps to option 2 - Send a message:
 1. In a terminal window, compile and run server.c.
 2. In a new terminal window, compile and run main.c.
-3. Enter Username and password. Wait for validation.
-4. After validation, choose option 2.
-5. Type name of a user to send messages to.
-6. Enter message and hit enter.
+3. Select option 0.
+4. Enter Username and password. Wait for validation.
+5. After validation, choose option 2.
+6. Type name of a user to send messages to.
+7. Enter message and hit enter.
 
 Steps to option 3 - Get my messages:
 1. In a terminal window, compile and run server.c.
 2. In a new terminal window, compile and run main.c.
-3. Enter Username and password. Wait for validation.
-4. After validation, choose option 3.
-5. View your list of messages.
+3. Select option 0.
+4. Enter Username and password. Wait for validation.
+5. After validation, choose option 3.
+6. View your list of messages.
 
 Steps to option 4 - Initiate a chat with my friend:
 1. In a terminal window, compile and run server.c.
 2. In a new terminal window, compile and run main.c.
-3. Enter Username and password. Wait for validation.
-4. After validation, choose option 4.
-5. Enter the port number in which you are available.
-6. Wait for another client to join the chat.
+3. Select option 0.
+4. Enter Username and password. Wait for validation.
+5. After validation, choose option 4.
+6. Enter the port number in which you are available.
+7. Wait for another client to join the chat. Do not close the window.
 
-Steps to option 5 - Initiate a chat with my friend:
+Steps to option 5 - Chat with my friend:
 1. If server.c is not running already, in a terminal window, compile and run server.c.
 2. In a new terminal window, compile and run main.c.
-3. Enter Username and password. Wait for validation.
-4. After validation, choose option 5.
-5. Enter the IP address and port number in which you want to chat with another client.
-6. IP and port number validates and you are now ready to chat.
+3. Select option 0.
+4. Enter Username and password. Wait for validation.
+5. After validation, choose option 5.
+6. Enter the IP address and port number in which you want to chat with another client.
+7. IP and port number validates and you are now ready to chat.
+
+Steps to option 7 - Exit:
+1. In a terminal window, compile and run server.c.
+2. In a new terminal window, compile and run main.c.
+3. Select option 0.
+4. Enter Username and password. Wait for validation.
+5. After validation, choose option 7.
+6. This option can also be chosen anytime else in the program.
