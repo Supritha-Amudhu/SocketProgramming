@@ -16,7 +16,7 @@ C FILES:
 3. main.c - The main program that has to be invoked for the client-server program to run.
 
 
-MODULE AVAILABLE:
+MODULES AVAILABLE:
 
 0 -- Connect/Re-connect to the Server
 1 -- Get a list of Users

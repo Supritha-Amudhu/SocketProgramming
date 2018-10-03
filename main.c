@@ -466,9 +466,9 @@ int get_user_details(int sock)
 	char* password;
 	char* isValid;
 	isValid = malloc(4);
-	printf("Enter a single-word Username to register: \n");
+	printf("Please enter a single-word Username to register: \n");
 	scanf("%s", &username);
-	printf("Enter a single-word Password to register: \n");
+	printf("Please enter a single-word Password to register: \n");
 	scanf("%s", &password);
 
 	if (send(sock, &username, strlen(&username), 0) != strlen(&username))
