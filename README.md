@@ -15,7 +15,7 @@ C files:
 
 
 Steps to option 6 - Register a new user:
-(Please do not start with option 0 to connect to server. Start with option 6 to connect to server and register as a new user)
+(Please do not start with option 0 to connect to server. Start with option 6 to connect to server and register as a new user. Please choose the username as one word, password as one word.)
 1. In a terminal window, compile and run Server.c
 2. In a new terminal window, compile and run main.c
 3. Choose option 6 to register as a new user.
