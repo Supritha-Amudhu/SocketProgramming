@@ -131,9 +131,9 @@ void sendMessage(int clntSocket, char *username)
         else
         {
             fprintf(file_writer, "%s\n", message);
+            printf("Message received successfully!\n");
         }
         fclose(file_writer);
-
         char isValid[1];
         isValid[0] = '1';
         if (send(clntSocket, isValid, 1, 0) != 1)
