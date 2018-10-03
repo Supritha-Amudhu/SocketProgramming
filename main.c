@@ -13,8 +13,8 @@
 #define INITIATE_CHAT 4
 #define CHAT_WITH_FRIEND 5
 #define REGISTER_AS_USER 6
-#define DISCONNECT_FROM_SERVER 7
-#define EXIT 8
+// #define DISCONNECT_FROM_SERVER 7
+#define EXIT 7
 #define STARTING_VALUE 10
 #define FILE_PATH "/Users/nishsiva/Desktop/Supritha/Networks/Networks Project 1/registered_user_list.txt"
 
@@ -100,19 +100,19 @@ int execute_commands(int option, int sock) {
 		break;
 		case REGISTER_AS_USER:
 			if (sock)
-			{
-				close(sock);
-				printf("Disconnecting from Server!\n");
-			}
+				{
+					close(sock);
+					printf("Disconnecting from Server!\n");
+				}
 			register_user_on_server();
 		break;
-		case DISCONNECT_FROM_SERVER:
-			if (sock)
-			{
-				close(sock);
-				printf("Disconnecting from Server!\n");
-			}
-		break;
+		// case DISCONNECT_FROM_SERVER:
+		// 	if (sock)
+		// 		{
+		// 			close(sock);
+		// 			printf("Disconnecting from Server!\n");
+		// 		}
+		// break;
 		case EXIT:
 			printf("Exiting application\n");
 		break;
@@ -604,8 +604,8 @@ int view_available_commands() {
 	printf("4 -- Initiate a chat with my friend\n");
 	printf("5 -- Chat with my friend\n");
 	printf("6 -- Register as a new User\n");
-	printf("7 -- Disconnect from server\n");
-	printf("8 -- Exit\n");
+	// printf("7 -- Disconnect from server\n");
+	printf("7 -- Exit\n");
 	printf("Please enter your choice:\n");
 	scanf("%d", &option);
 	return option;
