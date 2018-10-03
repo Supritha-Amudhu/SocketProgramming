@@ -1,3 +1,2 @@
-supritha,amudhu
 Alice,12345
-harry,potter
+Bob,12345

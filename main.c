@@ -316,7 +316,7 @@ int send_message(int sock)
 	payload[0] = "\0";
 	memset(payload, 0, sizeof payload);
 	strcat(payload, recipient);
-	strcat(payload, "::");
+	strcat(payload, "$$$");
 	if (strlen(message) < 1)
 	{
 		printf("Enter a valid message.");
@@ -353,7 +353,7 @@ int get_messages(int sock) {
 	// else
 	// 	// printf("waiting for messages..\n");
 
-	if (recv(sock, messages, 200, 0) <= 0)
+	if (recv(sock, messages, 600, 0) <= 0)
 		DieWithError("Unable to get user messages");
 
 	printf("\nMessages:\n%s\n", messages);

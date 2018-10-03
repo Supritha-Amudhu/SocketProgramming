@@ -158,12 +158,12 @@ void getUserMessages(int clntSocket, char *username)
     char *messages;
     messages = malloc(1000);
 
-    existing_file_contents = fgets(existing_file_contents, 100, file_reader);
+    existing_file_contents = fgets(existing_file_contents, 500, file_reader);
 
     while(existing_file_contents != NULL) {
-        char* message_str = strtok(existing_file_contents, "::");
+        char* message_str = strtok(existing_file_contents, "$$$");
         if(message_str != NULL && strcmp(message_str, username) == 0) {
-            message_str = strtok(NULL, "::");
+            message_str = strtok(NULL, "$$$");
             message_count = message_count + 1;
             strcat(messages, message_str);
             printf("Messages count: %d\n", message_count);
