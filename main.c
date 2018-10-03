@@ -588,7 +588,7 @@ int view_available_commands() {
 	int option = 0;
 	printf("\n\nHello User, welcome to my Client Server communication system :)\n\n");
 	printf("---------------------------------------------\n\n");
-	printf("0 -- Connect to the Server\n");
+	printf("0 -- Connect/Re-connect to the Server\n");
 	printf("1 -- Get a list of Users\n");
 	printf("2 -- Send a message\n");
 	printf("3 -- Get my messages\n");

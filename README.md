@@ -1,18 +1,34 @@
 README.md
 
-Description:
+
+DESCRIPTION:
 This is a client-server communcation program. There is a client program and a server program which communicates among each other by establishing a connection. Whenever a connection has to be established, a new port gets created, binded and then the port would be ready to send or receive messages.
 
-Input files:
+
+INPUT FILES:
 1. registered_users.txt - The text file that contains a list of registered users and their password.
 2. messages.txt - The text file that contains a list of messages that are shared between users in the application.
 
 
-C files:
+C FILES:
 1. Server.c - The program where the code for Server is invoked from.
 2. Client.c - The program where the code for Client is invoked from.
 3. main.c - The main program that has to be invoked for the client-server program to run.
 
+
+MODULE AVAILABLE:
+
+0 -- Connect/Re-connect to the Server
+1 -- Get a list of Users
+2 -- Send a message
+3 -- Get my messages
+4 -- Initiate a chat with my friend
+5 -- Chat with my friend
+6 -- Register as a new User (Please always choose option 0 first to re-connect to server after registration)
+7 -- Exit
+
+
+EXECUTING THE INDIVIDUAL MODULES:
 
 Steps to option 6 - Register a new user:
 (Please do not start with option 0 to connect to server. Start with option 6 to connect to server and register as a new user. Please choose the username as one word, password as one word.)
@@ -24,6 +40,12 @@ Steps to option 6 - Register a new user:
 6. Data gets sent to the server and is then stored in the file registered_users.txt.
 7. Select option 0 and enter IP, port and Login with credentials.
 8. The registered user now can select from options 0-7 to login and then perform operations.
+
+Steps to option 0 - Connect/Re-connect to server:
+1. In a terminal window, compile and run server.c.
+2. In a new terminal window, compile and run main.c.
+3. Select option 0.
+4. Enter Username and password. Wait for validation.
 
 Steps to option 1 - Get user list:
 1. In a terminal window, compile and run server.c.
